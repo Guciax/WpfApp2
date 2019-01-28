@@ -1,0 +1,76 @@
+﻿<Window x:Class="WpfApp2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="1080" Width="1980"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal" 
+        TextOptions.TextRenderingMode="Auto"        
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}"
+        >
+    <StackPanel HorizontalAlignment="Stretch">
+
+    
+            <!--Zlecenie -->
+            <materialDesign:Card
+                Background="{DynamicResource PrimaryHueDarkBrush}"
+                Foreground="{DynamicResource PrimaryHueDarkForegroundBrush}"
+                UniformCornerRadius="6"
+                Padding="32" Margin="10"
+                Height="150">
+                <TextBlock FontSize="50"
+                    TextWrapping="NoWrap">
+                    Zlecenie numer:    Model:
+                </TextBlock>
+            </materialDesign:Card>
+
+
+        <Grid Height ="600">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid  Grid.Column ="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="3*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <materialDesign:Card Padding="32" Margin="10" Grid.Row="0" VerticalAlignment="Stretch">
+                    <TextBlock Style="{DynamicResource MaterialDesignTitleTextBlock}">My First Material Design App</TextBlock>
+                </materialDesign:Card>
+                <materialDesign:Card Padding="10" Margin="10" Grid.Row="1" VerticalAlignment="Stretch">
+                    <Grid>
+                        <ProgressBar Value="20"  Margin="0 0 0 0" Grid.Row="1" Height="100"/>
+                        <TextBlock Margin="0 20 0 0" FontSize="50" Foreground ="Azure">Postęp testowania: </TextBlock>
+                        
+                    </Grid>
+                </materialDesign:Card>
+                
+
+
+            </Grid>
+            <Grid Grid.Column ="1">
+                <materialDesign:Card Padding="32" Margin="10" VerticalAlignment="Stretch">
+                    <TextBlock Style="{DynamicResource MaterialDesignTitleTextBlock}">My First Material Design App</TextBlock>
+                </materialDesign:Card>
+            
+            </Grid>
+        </Grid>
+
+            <materialDesign:Card 
+                Padding="32" 
+                Margin="10" 
+                Height="250"
+                UniformCornerRadius ="6">
+
+            </materialDesign:Card>
+
+    </StackPanel>
+</Window>
